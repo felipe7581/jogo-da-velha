@@ -5,7 +5,12 @@ def mostrar_tabuleiro():
     for linha in range(3):
         print(linha,end=" ")
         for coluna in range(3):
-            print(f"\t{tabuleiro[linha][coluna]}",end='')
+            if tabuleiro[linha][coluna] == 0:
+                print("\t~",end="")
+            elif tabuleiro[linha][coluna] == 1:
+                print("\tO",end="")
+            elif tabuleiro[linha][coluna] == -1:
+                print("\tX",end="")
         print("")
 
 mostrar_tabuleiro()
