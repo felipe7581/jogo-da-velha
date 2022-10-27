@@ -1,3 +1,4 @@
+import random as gerador
 tabuleiro = [[0,0,0],[0,0,0],[0,0,0]]
 
 print("\t0\t1\t2\n")
@@ -42,6 +43,18 @@ def checa_tabuleiro():      # função que checa o tabuleiro
     if (tabuleiro[0][0] + tabuleiro[1][1] + tabuleiro[2][2] == -3 or
         tabuleiro[0][2] + tabuleiro[1][1] + tabuleiro[0][2] == -3 ):
         return -1
+
+def jogada_computador():
+    linha = gerador.randrange(3)
+    coluna = gerador.randrange(3)
+
+    if tabuleiro[linha][coluna] == 0:
+        tabuleiro[linha][coluna] = 1
+    else:
+        while tabuleiro[linha][coluna] != 0:
+            linha = gerador.randrange(3)
+            coluna = gerador.randrange(3)
+        tabuleiro[linha][coluna] = 1 
 
 mostrar_tabuleiro()
 print("valor retornado na função:",checa_tabuleiro())
