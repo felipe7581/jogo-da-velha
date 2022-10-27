@@ -1,4 +1,4 @@
-tabuleiro = [[0,0,-1],[0,0,-1],[0,0,-1]]
+tabuleiro = [[0,0,0],[0,0,0],[0,0,0]]
 
 print("\t0\t1\t2\n")
 def mostrar_tabuleiro():    # função que vai exibir o tabuleiro na tela
