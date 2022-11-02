@@ -1,18 +1,19 @@
 import random as gerador
-tabuleiro = [[0,0,0],[0,0,0],[0,0,0]]
+tabuleiro = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
 
 print("\t0\t1\t2\n")
 def mostrar_tabuleiro():    # função que vai exibir o tabuleiro na tela
     for linha in range(3):
-        print(linha,end=" ")
+        print(linha, end=" ")
         for coluna in range(3):
             if tabuleiro[linha][coluna] == 0:
-                print("\t~",end="")
+                print("\t~", end="")
             elif tabuleiro[linha][coluna] == 1:
-                print("\tO",end="")
+                print("\tO", end="")
             elif tabuleiro[linha][coluna] == -1:
-                print("\tX",end="")
+                print("\tX", end="")
         print("")
+
 
 def checa_tabuleiro():      # função que checa o tabuleiro
     # primeiro checa as 3 linhas, se a somatoria dos valores seja igual a 3 ou -3 então
@@ -44,6 +45,7 @@ def checa_tabuleiro():      # função que checa o tabuleiro
         tabuleiro[0][2] + tabuleiro[1][1] + tabuleiro[0][2] == -3 ):
         return -1
 
+
 def jogada_computador():
     linha = gerador.randrange(3)
     coluna = gerador.randrange(3)
@@ -56,5 +58,9 @@ def jogada_computador():
             coluna = gerador.randrange(3)
         tabuleiro[linha][coluna] = 1 
 
+
+def jogada_humano():
+    pass
+
 mostrar_tabuleiro()
-print("valor retornado na função:",checa_tabuleiro())
+print("valor retornado na função:", checa_tabuleiro())
