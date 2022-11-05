@@ -94,6 +94,8 @@ def jogar():
         if verifica_empate() == 1:
             break
 
+    print("Jogo encerrado!")
+    mostrar_tabuleiro()
 
 def verifica_empate():
     soma = 0
